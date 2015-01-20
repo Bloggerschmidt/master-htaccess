@@ -1,7 +1,0 @@
-Proposed changes which were rejected
-================================================================================
-
-jpe?[g2]? instead of jp(eg|g|2)
---------------------------------------------------------------------------------
-We want to match EXACTLY THREE valid extensions: jpeg, jpg and jp2. The proposed
-rule also matches INVALID extensions. Sorry, no go.
