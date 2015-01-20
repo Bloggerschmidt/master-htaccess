@@ -298,6 +298,11 @@ RewriteRule ^administrator/components/com_admintools/restore\.php$ - [L]
 RewriteRule ^administrator/components/com_akeeba/restore\.php$ - [L]
 ## Allow Akeeba Kickstart
 RewriteRule ^kickstart\.php$ - [L]
+## Allow Font Awesome
+RewriteRule ^templates/frontend/fonts/font-awesome/fonts/fontawesome-webfont\.woff$ - [L]
+RewriteRule ^templates/frontend/fonts/font-awesome/fonts/fontawesome-webfont\.ttf$ - [L]
+## Allow Favicon
+RewriteRule ^templates/frontend/favicon\.ico$ - [L]
 
 # Add more rules to single PHP files here
 
