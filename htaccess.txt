@@ -203,17 +203,17 @@ AddOutputFilterByType DEFLATE text/plain text/html text/xml text/css application
 
 ########## Begin - Redirect index.php to /
 ## Note: Change example.com to reflect your own domain
-RewriteCond %{THE_REQUEST} !^POST
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/
-RewriteCond %{SERVER_PORT}>s ^(443>(s)|[0-9]+>s)$
-RewriteRule ^index\.php$ http%2://www.example.com/$1 [R=301,L]
+# RewriteCond %{THE_REQUEST} !^POST
+# RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/
+# RewriteCond %{SERVER_PORT}>s ^(443>(s)|[0-9]+>s)$
+# RewriteRule ^index\.php$ http%2://www.example.com/$1 [R=301,L]
 # If the above line throws a 500 error, try this instead:
 # RewriteRule ^index\.php$ http%2://www.example.com/$1 [R,L]
 ########## End - Redirect index.php to /
 
 ########## Begin - Redirect non-www to www
-RewriteCond %{HTTP_HOST} !^www\. [NC]
-RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+# RewriteCond %{HTTP_HOST} !^www\. [NC]
+# RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
 ## If the above throws an HTTP 500 error, swap [R=301,L] with [R,L]
 ########## End - Redirect non-www to www
 
@@ -241,10 +241,10 @@ RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
 # www.example.com to reflect your own domain. Remember to escape the dots using
 # \. in the left hand side of each rule. You need BOTH LINES PER URL for the rule
 # to work.
-RewriteCond %{SERVER_PORT} !^443$
+# RewriteCond %{SERVER_PORT} !^443$
 ## Alternatively, comment the above line and uncomment the following line:
 # RewriteCond %{HTTPS} ^off$ [NC]
-RewriteRule ^foobar\.html$ https://www.example.com/foobar.html [R=301,L]
+# RewriteRule ^foobar\.html$ https://www.example.com/foobar.html [R=301,L]
 ## NOTE: If you get an HTTP 500 error, please swap [R=301,L] with [R,L]
 # Add more rules below this line
 ########## End - Force HTTPS for certain pages
@@ -325,11 +325,11 @@ RewriteRule ^components/com_agora/img/members/ - [L]
 ## This blocks most common fingerprinting attacks ;)
 ## Note: Change www\.example\.com with your own domain name, substituting the
 ## dots with \., i.e.: www\.example\.com for www.example.com
-RewriteRule ^images/stories/.*\.(jp(e?g|2)?|png|gif|bmp|css|js|swf|ico)$ - [L]
-RewriteCond %{HTTP_REFERER} .
-RewriteCond %{HTTP_REFERER} !^https?://(www\.)?example\.com [NC]
-RewriteCond %{REQUEST_FILENAME} -f
-RewriteRule \.(jp(e?g|2)?|png|gif|bmp|css|js|swf|ico)$ - [F]
+# RewriteRule ^images/stories/.*\.(jp(e?g|2)?|png|gif|bmp|css|js|swf|ico)$ - [L]
+# RewriteCond %{HTTP_REFERER} .
+# RewriteCond %{HTTP_REFERER} !^https?://(www\.)?example\.com [NC]
+# RewriteCond %{REQUEST_FILENAME} -f
+# RewriteRule \.(jp(e?g|2)?|png|gif|bmp|css|js|swf|ico)$ - [F]
 
 ## Disallow visual fingerprinting of Joomla! sites (module position dump)
 ## Initial idea by Brian Teeman and Ken Crowder, see:
