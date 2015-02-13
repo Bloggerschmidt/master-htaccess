@@ -301,8 +301,11 @@ RewriteRule ^kickstart\.php$ - [L]
 ## Allow Font Awesome
 RewriteRule ^templates/frontend/fonts/font-awesome/fonts/fontawesome-webfont\.woff$ - [L]
 RewriteRule ^templates/frontend/fonts/font-awesome/fonts/fontawesome-webfont\.ttf$ - [L]
+RewriteRule ^plugins/system/t3/admin/fonts/fa3/font/fontawesome-webfont\.woff$ - [L]
+RewriteRule ^plugins/system/t3/admin/fonts/fa3/font/fontawesome-webfont\.ttf$ - [L]
 ## Allow Favicon
 RewriteRule ^templates/frontend/favicon\.ico$ - [L]
+RewriteRule ^administrator/templates/isis/favicon\.ico$ - [L]
 
 # Add more rules to single PHP files here
 
